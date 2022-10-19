@@ -286,6 +286,12 @@ public class VideoGame{
 		return pos;
 	}
 
+	/**
+	 * callEmptyTreasurePos: evaluates if there are empty spaces in the treasure array.
+	 * @param idNumber identifier of the level to evaluate.
+	 * @return boolean on the layout of the space in the array.
+	 * */
+
 	public boolean callEmptyTreasurePos(String idNumber){
 		boolean isEmpty = false;
 		int posLevel = seacrhLevelById(idNumber);
@@ -295,6 +301,12 @@ public class VideoGame{
 		return isEmpty;
 	}
 
+	/**
+	 * callEmptyEnemyPos: evaluates if there are empty spaces in the enemy array.
+	 * @param idNumber identifier of the level to evaluate.
+	 * @return boolean on the layout of the space in the array.
+	 * */
+
 	public boolean callEmptyEnemyPos(String idNumber){
 		boolean isEmpty = false;
 		int posLevel = seacrhLevelById(idNumber);
@@ -303,6 +315,12 @@ public class VideoGame{
 		}
 		return isEmpty;
 	}
+
+	/**
+	 * searchPlayerByName: the nickname of the players is sought to give its location in the array.
+	 * @param nickname identifier of the level to be searched.
+	 * @return position of the array of the player that was searched.
+	 * */
 
 	public int searchPlayerByname(String nickname){
 		int pos = -1;
@@ -316,6 +334,13 @@ public class VideoGame{
 		return pos;
 	}
 
+	/**
+	 * changePlayerScore: takes the player's initial score and changes it with its respective set.
+	 * @param nickname player nickname.
+	 * @param initialScore player initial score.
+	 * @return validation message.
+	 * */
+
 	public String changePlayerScore(String nickname, double initialScore){
 		String msj = "No se pudo cambiar la puntuacion.";
 		int posPlayer = searchPlayerByname(nickname);
@@ -325,6 +350,12 @@ public class VideoGame{
 		}
 		return msj;
 	}
+
+	/**
+	 * printTreasuresAndEnemys: validates the level to be printed and performs the operation with other toString methods.
+	 * @param idNumber identifier of the level to print.
+	 * @return message with level information.
+	 * */
 
 	public String printTreasuresAndEnemys(String idNumber){
 		String msj = "";
@@ -336,6 +367,13 @@ public class VideoGame{
 		}
 		return msj;
 	}
+
+	/**
+	 * increasePlayerLevel: validate a player's score and send a message about the points he needs.
+	 * @param nickname player nickname.
+	 * @param initialScore player score.
+	 * @return message with the necessary points to pass the level.
+	 * */
 
 	public String increasePlayerLevel(String nickname, double initialScore){
 		String msj = "El jugador no se encuentra en el video juego.";
